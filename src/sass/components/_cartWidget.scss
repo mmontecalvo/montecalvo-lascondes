@@ -1,0 +1,7 @@
+.navbar__shoppingCart {
+    cursor: pointer;
+
+    &:hover {
+        color: $color-primary;
+    }
+}

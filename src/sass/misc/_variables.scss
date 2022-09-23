@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'JosephSophia';
+    src: url('../../fonts/JosephSophia.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url('../../fonts/MYRIADPRO-REGULAR.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro Light';
+    src: url('../../fonts/MyriadPro-Light.woff') format('woff');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Myriad Pro Bold';
+    src: url('../../fonts/MYRIADPRO-BOLD.woff') format('woff');
+    font-style: normal;
+}
+
+/* COLORS */
+
+$color-bg: #F7F7F7;
+$color-nav: #979797;
+$color-text: #3C3C3B;
+$color-primary: #E71D73;
+$color-secondary: #00A19A;
+
+$color-bg-dark: #011627;
+
+/* FONTS */
+
+$font-title: 'Myriad Pro Bold', sans-serif;
+$font-base: 'Myriad Pro', sans-serif;
+$font-light: 'Myriad Pro Light', sans-serif;
+$font-logo: 'JosephSophia', cursive;
+
+/* FONT-SIZE REFERENCE */
+$text-desktop: 1rem;
+$text-intermediate: 0.8rem;
+$text-mobile: 0.66rem;
+
+/* FONT-SIZES */
+$text-xxl: 8.1em;
+$text-xl: 5.4em;
+$text-l: 3.6em;
+$text-m: 2.4em;
+$text-base: 1.6em;
+$text-s: 1.4em;
+$text-xs: 1.2em;
+
+/* SPACES */
+$spacing-l: 3rem;
+$spacing-m: 2rem;
+$spacing-s: 1rem;
+$spacing-xs: 0.1rem;
+
+/* BORDERS */
+$b-desktop: 0.2rem;
+$b-mobile: 0.1rem;

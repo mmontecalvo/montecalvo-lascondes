@@ -1,0 +1,125 @@
+.main-navbar {
+    position: fixed;
+    height: 6rem;
+    width: 100%;
+    background-color: $color-bg;
+    box-shadow: 0px -3px 10px 1px $color-text;
+    @include flex(row, center, center, 0);
+
+    .navbar {
+        @include flex(row, space-between, center, 0);
+        max-width: 1200px;
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: 4rem;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .navbar__search {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 40%;
+
+            .search__icon {
+                cursor: pointer;
+                position: absolute;
+                left: 1rem;
+                fill: $color-primary;
+                opacity: 0.5;
+                width: 2rem;
+                height: 2rem;
+    
+                &:hover {
+                    fill: $color-primary;
+                    opacity: 1;
+                }
+            } 
+
+            .search__input {
+                width: 100%;
+                height: 4rem;
+                @include text($color-text, $text-base, left, 1em);
+                font-family: $font-base;
+                padding: 0 2rem;
+                padding-left: 3.5rem;
+                border: $b-desktop solid transparent;
+                border-radius: 0.5rem;
+                outline: none;
+                background-color: #c7c7c7;
+                transition: 1s ease;
+
+                &::placeholder {
+                    color: $color-secondary;
+                    opacity: 0.5;
+                }
+
+                &:focus, &:hover {
+                    outline: none;
+                    border-color: $color-primary;
+                    background-color: $color-bg;
+                    box-shadow: inset 0 0 1.5rem 0.1rem $color-primary;
+                }
+            }
+        }
+
+        .navbar__menu {
+            @include flex(row, center, center, $spacing-m);
+
+            button {
+                @include text($color-text, $text-base, center, 1em);
+                font-family: $font-base;
+                padding: $spacing-s;
+                cursor: pointer;
+                width: 12rem;
+                height: 4rem;
+                border: $b-desktop solid $color-bg;
+                border-radius: 0.3em;
+                background-color: transparent;
+                position: relative;
+                outline: none;
+                transition: 1s;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -1rem;
+                    left: 3%;
+                    width: 95%;
+                    height: 40%;
+                    background-color: $color-bg;
+                    transition: 0.5s;
+                    transform-origin: center;
+                }
+
+                &::before {
+                    content: "";
+                    transform-origin: center;
+                    position: absolute;
+                    top: 80%;
+                    left: 3%;
+                    width: 95%;
+                    height: 40%;
+                    background-color: $color-bg;
+                    transition: 0.5s;
+                }
+
+                &:hover::before, &:hover::after {
+                    transform: scale(0)
+                }
+
+                &:hover {
+                    box-shadow: inset 0 0 2.5rem $color-primary;
+                    border: $b-desktop solid $color-primary;
+                }
+            }  
+        }
+    }
+}

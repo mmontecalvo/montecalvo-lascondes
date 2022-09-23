@@ -1,0 +1,11 @@
+
+/* MISC */
+@import './sass/misc/variables';
+@import './sass/misc/mixins';
+@import './sass/misc/normalize';
+
+/* COMPONENTS */
+
+@import './App.scss';
+@import './sass/components/navbar';
+@import './sass/components/cartWidget';
