@@ -1,0 +1,4 @@
+h1 {
+    @include text($color-text, $text-l, center, 1em);
+    padding-top: 2rem;
+}
