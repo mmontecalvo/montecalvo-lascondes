@@ -1,0 +1,36 @@
+.itemDetail {
+    @include flex(row, center, center, $spacing-s);
+    max-width: 120rem;
+
+    .itemDetail__img {
+        width: 50%;
+
+        img {
+            height: 48rem;
+        }
+    }
+
+    .itemDetail__info {
+        @include flex(column, center, flex-start, $spacing-s);
+        width: 50%;
+
+        .info__title {
+            @include text($color-secondary, $text-l, left, 1em);
+        }
+
+        .info__text {
+            @include text($color-text, $text-m, left, 1em);
+        }
+
+        .info__price {
+            @include text($color-text, $text-l, left, 1em);
+            font-weight: bold;
+            padding-top: $spacing-l;
+        }
+
+        hr {
+            width: 100%;
+            margin: $spacing-m 0;
+        }
+    }
+}

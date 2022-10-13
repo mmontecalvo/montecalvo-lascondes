@@ -1,0 +1,5 @@
+.itemList {
+    @include flex(row, center, center, $spacing-s);
+    flex-wrap: wrap;
+    padding: $spacing-l;
+}

@@ -22,3 +22,10 @@ ul{
 a{
     text-decoration: none;
 }
+
+.mainContent {
+    @include flex(column, center, center, 0);
+    margin: 6rem auto 0;
+    max-width: 1200px;
+    min-height: calc(100vh - 6rem);
+}

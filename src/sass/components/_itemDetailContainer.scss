@@ -1,0 +1,4 @@
+.itemDetailContainer {
+    @include flex(row, center, center, 0);
+    padding: $spacing-l;    
+}

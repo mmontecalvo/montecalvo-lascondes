@@ -1,0 +1,71 @@
+/* From uiverse.io by @alexruix */
+.card {
+    width: 24rem;
+    height: 30rem;
+    padding: $spacing-s;
+    background: $color-bg;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+    .card-img {
+        background-color: #ffcaa6;
+        height: 40%;
+        width: 100%;
+        border-radius: .5rem;
+        transition: .3s ease;
+        overflow: hidden;
+    
+        // &:hover {
+        //     transform: translateY(-25%);
+        //     box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px, rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+        // }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .card-info {
+        padding-top: 10%;
+
+        .text-title {
+            @include text($color-text, $text-base, left, 1em);
+            font-family: $font-title;
+        }
+
+        .text-body {
+            padding-top: $spacing-s;
+            @include text($color-text, $text-s, left, 1em);
+        }
+    }
+
+    .card-footer {
+        position: absolute;
+        bottom: 0;
+        width: 22rem;
+        @include flex(row, space-between, center, 0);
+        padding: $spacing-s 0;
+        border-top: $b-desktop solid $color-bg-grey;
+
+        .text-price {
+            @include text($color-text, $text-base, left, 1em);
+            font-weight: bold;
+        }
+
+        .button-icon {
+            cursor: pointer;
+            font-size: $text-m;
+            fill: $color-secondary;
+            transition: .3s ease-in-out;
+
+            &:hover {
+                fill: $color-primary;
+            }
+        }
+    }   
+}
+   
+   
+   
+   

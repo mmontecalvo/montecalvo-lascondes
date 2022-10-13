@@ -1,0 +1,41 @@
+.card__counter {
+    @include flex(column, center, center, $spacing-s);
+    
+    .counter {
+        @include flex(row, center, center, $spacing-s);
+        padding: $spacing-s;
+        background-color: $color-bg-grey;
+        border-radius: 0.5rem;
+
+        .counter__control {
+            cursor: pointer;
+            height: 1.5rem;
+            width: 1.5rem;
+            color: $color-secondary;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+        .counter__number {
+            @include text($color-text, $text-base, center, 1em);
+            width: 12rem;
+        }
+    }
+
+    .card__addCart {
+        @include text($color-text, $text-base, center, 1em);
+        font-family: $font-base;
+        cursor: pointer;
+        width: 19rem;
+        padding: $spacing-s;
+        background-color: $color-bg-grey;
+        border-radius: 0.5rem;
+        border: none;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}

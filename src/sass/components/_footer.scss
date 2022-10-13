@@ -1,0 +1,59 @@
+.mainFooter {
+    width: 100%;
+    background-color: $color-bg;
+    box-shadow: 0 0.3rem 1rem 0.1rem $color-text;
+    @include flex(column, center, center, $spacing-l);
+    z-index: 10000;
+    padding: $spacing-m;
+
+    .mainFooter__info {
+        @include flex(row, space-between, center, 0);
+        width: 100%;
+        max-width: 1200px;
+
+        .info__logo {
+            @include flex(column, center, center, $spacing-s);
+            width: 50%;
+            padding: $spacing-s;
+            border-right: $b-desktop solid $color-bg-grey;
+
+            img {
+                width: 18rem;
+            }
+        }
+
+        .info__contact {
+            @include flex(column, center, flex-start, $spacing-s);
+            margin: 0 auto;
+
+            .contact__title {
+                @include text($color-text, $text-base, left, 1em);
+                font-weight: bold;
+            }
+
+            .contact__way {
+                @include text($color-text, $text-base, left, 1em);
+
+                li {
+                    @include flex(row, flex-start, center, $spacing-s);
+                    padding: 0.5rem 0;
+
+                    .way__icon {
+                        cursor: pointer;
+                        font-size: 2rem;
+                        fill: $color-secondary;
+
+                        &:hover {
+                            fill: $color-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .mainFooter__copyright {
+        @include text($color-text, $text-xs, center, 1em);
+        font-weight: normal;
+    }
+}

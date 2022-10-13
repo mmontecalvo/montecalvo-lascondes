@@ -2,27 +2,27 @@ export const libreriaCategories = [
     {
         id: 0,
         name: "Artística",
-        href: "#"
+        route: "categoría/Librería/Artística"
     },
     {
         id: 1,
         name: "Comercial",
-        href: "#"
+        route: "categoría/Librería/Comercial"
     },
     {
         id: 2,
         name: "Escolar",
-        href: "#"
+        route: "categoría/Librería/Escolar"
     },
     {
         id: 3,
         name: "Técnica",
-        href: "#"
+        route: "categoría/Librería/Técnica"
     },
     {
         id: 4,
         name: "Universitaria",
-        href: "#"
+        route: "categoría/Librería/Universitaria"
     }
 ]
 
@@ -30,16 +30,16 @@ export const cotillonCategories = [
     {
         id: 0,
         name: "Fiestas",
-        href: "#"
+        route: "categoría/Cotillón/Fiestas"
     },
     {
         id: 1,
         name: "Papelería",
-        href: "#"
+        route: "categoría/Cotillón/Papelería"
     },
     {
         id: 2,
         name: "Repostería",
-        href: "#"
+        route: "categoría/Cotillón/Repostería"
     }
 ]

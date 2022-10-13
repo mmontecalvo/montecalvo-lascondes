@@ -1,44 +1,82 @@
 import Name from '../img/name.svg';
-// import Logo from '../img/logo.svg';
 import SearchIcon from '@mui/icons-material/Search';
 import CartWidget from './CartWidget';
 import BurgerMenu from './BurgerMenu';
 import { libreriaCategories, cotillonCategories } from '../data/categories'
+import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const desafioCtg = [
+        {
+            id: 0,
+            name: "electronics",
+            route: "categoría/electronics"
+        },
+        {
+            id: 1,
+            name: "jewelery",
+            route: "categoría/jewelery"
+        },
+        {
+            id: 2,
+            name: "men's clothing",
+            route: "categoría/men's clothing"
+        },
+        {
+            id: 3,
+            name: "women's clothing",
+            route: "categoría/women's clothing"
+        },
+    ]
+
     return (
         <>
         <header className="main-navbar">
             <nav className="navbar">
                 <BurgerMenu />
-                <img src={Name} alt="Logo de Las Condes, Librería y Cotillón." />
+                <Link to="/">
+                    <img src={Name} alt="Logo de Las Condes, Librería y Cotillón." />
+                </Link>
                 <div className="navbar__search">
                     <SearchIcon className="search__icon"/>
                     <input placeholder="Buscar..." type="search" className="search__input" />
                 </div>
                 <ul className="navbar__menu">
                     <li className="menu__dropdown">
-                        <a>LIBRERÍA</a>
+                        DESAFÍO
                         <div className="dropdown-content">
                             {
-                                libreriaCategories.map((category) => {
-                                    return <a key={category.id} href={category.href}>{category.name}</a>
+                                desafioCtg.map((category) => {
+                                    return <NavLink key={category.id} to={category.route}>{category.name}</NavLink>
                                 })
                             }
                         </div>
                     </li>
                     <li className="menu__dropdown">
-                        <a>COTILLÓN</a>
+                        LIBRERÍA
+                        <div className="dropdown-content">
+                            {
+                                libreriaCategories.map((category) => {
+                                    return <NavLink key={category.id} to={category.route}>{category.name}</NavLink>
+                                })
+                            }
+                        </div>
+                    </li>
+                    <li className="menu__dropdown">
+                        COTILLÓN
                         <div className="dropdown-content">
                             {
                                 cotillonCategories.map((category) => {
-                                    return <a key={category.id} href={category.href}>{category.name}</a>
+                                    return <NavLink key={category.id} to={category.route}>{category.name}</NavLink>
                                 })
                             }
                         </div>
                     </li>
                 </ul>
-                <CartWidget />
+                <Link to="/cart">
+                    <CartWidget />
+                </Link>
             </nav>
         </header>
     </>

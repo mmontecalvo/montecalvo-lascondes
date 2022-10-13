@@ -6,8 +6,15 @@
 
 /* COMPONENTS */
 
-@import './App.scss';
 @import './sass/components/burgerMenu';
 @import './sass/components/cartWidget';
 @import './sass/components/navbar';
+@import './sass/components/footer';
 @import './sass/components/itemListContainer';
+@import './sass/components/itemCount';
+@import './sass/components/itemList';
+@import './sass/components/item';
+@import './sass/components/spinner';
+@import './sass/components/itemDetailContainer';
+@import './sass/components/itemDetail';
+@import './sass/components/cartViewContainer';
