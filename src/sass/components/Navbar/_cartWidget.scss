@@ -1,0 +1,24 @@
+.navbar__shoppingCart {
+    position: relative;
+
+    .shoppingCart__icon {
+        cursor: pointer;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    .shoppingCart__info {
+        position: absolute;
+        right: -0.2rem;
+        top: -0.2rem;
+        height: 1.8rem;
+        width: 1.8rem;
+        @include flex(row, center, center, 0);
+        background-color: $color-primary;
+        border-radius: 100%;
+        @include text($color-bg, $text-s, center, 1em);
+    }   
+}
+

@@ -1,4 +1,3 @@
-
 /* MISC */
 @import './sass/misc/variables';
 @import './sass/misc/mixins';
@@ -6,15 +5,28 @@
 
 /* COMPONENTS */
 
-@import './sass/components/burgerMenu';
-@import './sass/components/cartWidget';
-@import './sass/components/navbar';
-@import './sass/components/footer';
-@import './sass/components/itemListContainer';
-@import './sass/components/itemCount';
-@import './sass/components/itemList';
-@import './sass/components/item';
+/* NAVBAR */
+@import './sass/components/Navbar/navbar';
+@import './sass/components/Navbar/burgerMenu';
+@import './sass/components/Navbar/cartWidget';
+
+/* FOOTER */
+@import './sass/components/Footer/footer';
+
+/* OTHERS */
 @import './sass/components/spinner';
-@import './sass/components/itemDetailContainer';
-@import './sass/components/itemDetail';
-@import './sass/components/cartViewContainer';
+@import './sass/components/itemCount';
+
+/* CONTAINERS */
+
+/* ITEM LIST CONTAINER */
+@import './sass/containers/ItemListContainer/itemListContainer';
+@import './sass/containers/ItemListContainer/itemList';
+@import './sass/containers/ItemListContainer/item';
+
+/* ITEM DETAIL CONTAINER */
+@import './sass/containers/ItemDetailContainer/itemDetailContainer';
+@import './sass/containers/ItemDetailContainer/itemDetail';
+
+/* CART VIEW CONTAINER */
+@import './sass/containers/CartViewContainer/cartViewContainer';

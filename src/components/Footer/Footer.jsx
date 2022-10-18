@@ -1,5 +1,5 @@
-import name from '../img/name.svg';
-import logo from '../img/logo.svg';
+import name from '../../img/name.svg';
+import logo from '../../img/logo.svg';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import EmailIcon from '@mui/icons-material/Email';

@@ -7,6 +7,7 @@
 
         img {
             height: 48rem;
+            max-width: 90%;
         }
     }
 
@@ -31,6 +32,21 @@
         hr {
             width: 100%;
             margin: $spacing-m 0;
+        }
+
+        .info__buy {
+            @include text($color-text, $text-base, center, 1em);
+            font-family: $font-base;
+            cursor: pointer;
+            width: 19rem;
+            padding: $spacing-s;
+            background-color: $color-bg-grey;
+            border-radius: 0.5rem;
+            border: none;
+
+            &:hover {
+                background-color: $color-primary;
+            }
         }
     }
 }

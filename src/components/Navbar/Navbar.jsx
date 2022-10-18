@@ -1,8 +1,8 @@
-import Name from '../img/name.svg';
+import Name from '../../img/name.svg';
 import SearchIcon from '@mui/icons-material/Search';
 import CartWidget from './CartWidget';
 import BurgerMenu from './BurgerMenu';
-import { libreriaCategories, cotillonCategories } from '../data/categories'
+import { libreriaCategories, cotillonCategories } from '../../data/categories'
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {

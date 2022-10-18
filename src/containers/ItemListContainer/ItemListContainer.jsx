@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from "./ItemList";
-import Spinner from './Spinner';
+import Spinner from '../../components/Spinner';
 
 function ItemListContainer({greeting}) {
 
@@ -29,7 +29,7 @@ function ItemListContainer({greeting}) {
     }
 
     getItem();
-  }, [idCategory]);
+  }, [ idCategory, URL_CAT]);
 
   return (
     <section className="mainContent itemListContainer">

@@ -3,8 +3,6 @@ import Item from './Item';
 
 
 function ItemList({products}) {
-
-    console.log(products)
     return (
         <article className="itemList">
             {
