@@ -1,4 +1,87 @@
 .cartView {
-    @include flex(row, center, center, 0);
-    padding: $spacing-l;    
+    @include flex(column, center, center, $spacing-m);
+    
+    .cartView__message {
+        @include text($color-text, $text-m, center, 1em);
+
+        .message__link {
+            cursor: pointer;
+            color: $color-secondary;
+            text-decoration: underline;
+
+            &:hover { 
+                color: $color-primary;
+            }
+        }
+    }
+
+    .cartView__header {
+        @include flex(row, space-between, center, 0);
+        width: 100%;
+        border-bottom: $b-desktop solid $color-bg-grey;
+        padding: $spacing-m;
+
+        .header__title {
+            @include text($color-text, $text-l, center, 1em);
+        }
+
+        .header__links {
+            @include flex(row, center, center, 0);
+
+            .link, .clear {
+                @include text($color-secondary, $text-base, center, 1em);
+                cursor: pointer;
+
+                &:hover { 
+                    color: $color-primary;
+                }
+            }
+
+            .link {
+                padding-right: $spacing-l;
+                border-right: $b-desktop solid $color-bg-grey;
+            }
+
+            .clear {
+                padding-left: $spacing-l;
+            }
+            
+        }
+    }
+
+    .cartView__total {
+        @include flex(column, center, flex-end, 0);
+        width: 100%;
+        border-top: $b-desktop solid $color-bg-grey;
+        padding: $spacing-m 4rem;
+
+        .total__container {
+            @include flex(row, space-between, center, $spacing-l);
+            width: 20%;
+
+            .title {
+                @include text($color-secondary, $text-m, left, 1em);
+            }
+
+            .total {
+                @include text($color-text, $text-m, left, 1em);
+            }
+        }
+
+        .total__btn {
+            @include text($color-text, $text-base, center, 1em);
+            font-family: $font-base;
+            cursor: pointer;
+            width: 20%;
+            padding: $spacing-s;
+            background-color: $color-bg-grey;
+            border-radius: 0.5rem;
+            border: none;
+            margin-top: $spacing-m;
+
+            &:hover {
+                background-color: $color-primary;
+            }
+        }
+    }
 }

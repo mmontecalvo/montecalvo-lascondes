@@ -10,10 +10,13 @@ export function CartContext({children}) {
     console.log(total);
     useEffect(() => {
         console.log(cart);
+        let qtyCart = 0;
         let totalCart = 0;
         cart.forEach((item) => {
+            qtyCart += item.quantity;
             totalCart += item.price * item.quantity;
         });
+        setQuantity(qtyCart);
         setTotal(totalCart)
     }, [ cart ]);
 
@@ -21,7 +24,7 @@ export function CartContext({children}) {
         if (isInCart(item.id)) {
             const updatedCart = cart.map((product) =>
                 product.id === item.id ? (
-                    {...product, quantity: product.quantity + qty}
+                    {...product, quantity: qty}
                 ) : (
                     product
                 )
@@ -29,7 +32,7 @@ export function CartContext({children}) {
             setCart(updatedCart);
         } else {
             setCart([...cart, {...item, quantity: qty}])
-            setQuantity(quantity + 1)
+            setQuantity(quantity + qty)
         }
     }
 

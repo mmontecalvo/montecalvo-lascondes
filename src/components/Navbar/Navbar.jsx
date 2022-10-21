@@ -6,7 +6,6 @@ import { libreriaCategories, cotillonCategories } from '../../data/categories'
 import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-
     const desafioCtg = [
         {
             id: 0,
@@ -74,9 +73,7 @@ const Navbar = () => {
                         </div>
                     </li>
                 </ul>
-                <Link to="/cart">
-                    <CartWidget />
-                </Link>
+                <Link to="/cart"><CartWidget /></Link>
             </nav>
         </header>
     </>

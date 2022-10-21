@@ -7,9 +7,11 @@ function CartWidget() {
   const { quantity } = useContext(Context);
 
   return (
-    <div className="navbar__shoppingCart">
+    <div className="navbar__shoppingCart" >
       <ShoppingCartTwoToneIcon className="shoppingCart__icon" sx={{ fontSize: 40, color: '#00A19A'}}/>
-      <div className="shoppingCart__info">{quantity}</div>
+      {
+        quantity > 0 && <div className="shoppingCart__info">{quantity}</div>
+      }
     </div>
   )
 }
