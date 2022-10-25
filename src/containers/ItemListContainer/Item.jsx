@@ -9,7 +9,7 @@ function Item({product}) {
             </div>
             <div className="card-info">
                 <p className="text-title">{product.title}</p>
-                <p className="text-body">Pequeña descripción del producto...</p>
+                <p className="text-body">{product.description}</p>
             </div>
             <div className="card-footer">
                 <span className="text-price">${product.price}</span>

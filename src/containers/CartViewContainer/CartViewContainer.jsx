@@ -23,7 +23,7 @@ function CartViewContainer() {
                         </div>
                         {
                             cart.map((product) => {
-                                return <CartItem product={product} />
+                                return <CartItem key={product.id} product={product} />
                             })
                         }
                         <div className="cartView__total">

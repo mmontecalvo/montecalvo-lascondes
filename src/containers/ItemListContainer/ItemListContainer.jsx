@@ -1,24 +1,34 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { getDocs, collection, query, where } from 'firebase/firestore';
+import { db } from '../../firebase/firebase';
 import ItemList from "./ItemList";
 import Spinner from '../../components/Spinner';
+import { Context } from '../../context/CartContext';
 
 function ItemListContainer({greeting}) {
+
+  const { itemList } = useContext(Context);
 
   const [ products, setProducts ] = useState([]);
   const [ loading, setLoading ] = useState([true]);
 
   const { idCategory } = useParams();
 
-  const URL_BASE = 'https://fakestoreapi.com/products';
-  const URL_CAT = `${URL_BASE}/category/${idCategory}`;
-
   useEffect(() => {
+    const productCollection = collection(db, 'products');
+    const q = query(productCollection, where('category', '==', (idCategory ? idCategory : '')));
+
     const getItem = async () => {
       try{
-        const answer = await fetch( idCategory ? URL_CAT : URL_BASE );
-        const data = await answer.json();
-        setProducts(data);
+        const answer = await getDocs(idCategory ? q : productCollection);
+        const dataDocs = answer.docs.map( item => {
+          return {
+            ...item.data(),
+            id: item.id
+          };
+        })
+        setProducts(dataDocs);
       }
       catch(error){
         console.error(error);
@@ -29,7 +39,11 @@ function ItemListContainer({greeting}) {
     }
 
     getItem();
-  }, [ idCategory, URL_CAT]);
+  }, [ idCategory ]);
+
+  useEffect(() => {
+    itemList(products);
+  }, [ products, itemList ])
 
   return (
     <section className="mainContent itemListContainer">

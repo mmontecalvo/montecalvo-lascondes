@@ -1,6 +1,5 @@
 .navbar__burger-menu {
     .burger-menu__open {
-        display: block;
         cursor: pointer;
         stroke: $color-secondary;
         fill: $color-secondary;
@@ -15,7 +14,6 @@
     }
     
     .burger-menu__close {
-        display: none;
         cursor: pointer;
         stroke: $color-secondary;
         fill: $color-secondary;

@@ -7,9 +7,8 @@ export function CartContext({children}) {
     const [ cart, setCart ] = useState([]);
     const [ quantity, setQuantity ] = useState(0);
     const [ total, setTotal ] = useState(0);
-    console.log(total);
+
     useEffect(() => {
-        console.log(cart);
         let qtyCart = 0;
         let totalCart = 0;
         cart.forEach((item) => {
@@ -47,9 +46,15 @@ export function CartContext({children}) {
     }
 
     const isInCart = (itemId) => cart.some((item) => item.id === itemId);
+    
+    // Estado que guarda la lista de productos para la barra buscadora del Navbar
+    const [ data, setData ] = useState([]);
+    const itemList = (list) => {
+        setData(list);
+    } 
 
     return (
-        <Context.Provider value={{ cart, quantity, total, addItem, removeItem, clear, isInCart }}>
+        <Context.Provider value={{ cart, quantity, total, addItem, removeItem, clear, isInCart, data, itemList }}>
             {children}
         </Context.Provider>
     )

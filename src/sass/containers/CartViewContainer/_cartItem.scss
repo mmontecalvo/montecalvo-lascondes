@@ -79,3 +79,64 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .cartItem {
+        width: 96%;
+        height: auto;
+        display: grid;
+        grid-template-areas:
+        'img img info info info info info info'
+        'empty empty empty empty qty qty total total'
+        ;
+        gap: $spacing-s;
+    
+        .cartItem__img {
+            grid-area: img;
+            width: auto;
+        }
+    
+        .cartItem__info {
+            grid-area: info;
+            width: auto;
+
+            .info__title {
+                @include text($color-text, 1.8rem, left, 1em);
+            }
+        }
+    
+        .cartItem__qty {
+            grid-area: qty;
+            width: auto;
+            @include flex(row, center, center, $spacing-s);
+    
+            .qty__title {
+                @include text($color-secondary, $text-base, left, 1em);
+                margin-bottom: 0;
+            }
+    
+            .qty {
+                @include text($color-text, $text-base, left, 1em);
+            }
+        }
+    
+        .cartItem__total {
+            grid-area: total;
+            width: auto;
+            @include flex(row, center, center, $spacing-s);
+    
+            .total__title {
+                @include text($color-secondary, $text-base, left, 1em);
+                margin-bottom: 0;
+            }
+    
+            .total {
+                @include text($color-text, $text-base, left, 1em);
+            }
+        }
+    
+        .cartItem__remove {
+            font-size: 2rem;
+        }
+    }
+}

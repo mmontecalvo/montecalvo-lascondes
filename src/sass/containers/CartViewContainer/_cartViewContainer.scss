@@ -85,3 +85,32 @@
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .cartView {
+        .cartView__message {
+            @include text($color-text, 2rem, center, 1em);
+        }
+    
+        .cartView__header {
+            @include flex(column, center, center, $spacing-m);
+            width: 96%;
+    
+            .header__title {
+                @include text($color-text, $text-l, center, 1em);
+            }
+        }
+    
+        .cartView__total {
+            width: 96%;
+    
+            .total__container {
+                width: 50%;
+            }
+    
+            .total__btn {
+                width: 50%;
+            }
+        }
+    }
+}

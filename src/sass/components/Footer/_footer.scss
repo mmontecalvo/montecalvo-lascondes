@@ -57,3 +57,16 @@
         font-weight: normal;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .mainFooter {
+        .mainFooter__info {
+            @include flex(column, center, center, $spacing-m);
+    
+            .info__logo {
+                max-width: 90%;
+                border-right: none;
+            }
+        }
+    }
+}
