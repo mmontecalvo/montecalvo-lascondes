@@ -16,12 +16,12 @@ function ItemListContainer({greeting}) {
   const { idCategory } = useParams();
 
   useEffect(() => {
-    const productCollection = collection(db, 'products');
-    const q = query(productCollection, where('category', '==', (idCategory ? idCategory : '')));
+    const productCollection = collection(db, 'productList');
+    const q = idCategory ? query(productCollection, where('category', '==', idCategory)) : productCollection;
 
     const getItem = async () => {
       try{
-        const answer = await getDocs(idCategory ? q : productCollection);
+        const answer = await getDocs(q);
         const dataDocs = answer.docs.map( item => {
           return {
             ...item.data(),

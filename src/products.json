@@ -5,6 +5,7 @@
         "description": "Pintura acrílica de densidad media, realizada con pigmentos de alta calidad y gran poder cubritivo. Creada de acuerdo a los actuales requerimientos de artesanos, pintores decorativos y estudiantes.",
         "category": "Artística",
         "price": 215,
+        "stock": 50,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/74398-6581a66f062a5a275a15864794988871-1024-1024.jpg"
     },
     {
@@ -13,6 +14,7 @@
         "description": "Incluye 24 acuarelas de intensos colores en estuche mas un pincel. Las pastillas son de 3 cm de diámetro",
         "category": "Artística",
         "price": 1815,
+        "stock": 25,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/acuarela-giotto-premium-x-24-colores-pincel1-2db95587b826b4cab315856854309687-1024-1024.jpg"
     },
     {
@@ -21,6 +23,7 @@
         "description": "Punta redonda, pelo sintético, mango corto rojo. Ideal para acrílicos y acuarelas. Trazos firmes.",
         "category": "Artística",
         "price": 274,
+        "stock": 60,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/01500102491-298dfb101965a0cada15878430597480-640-0.jpg"
     },
     {
@@ -29,6 +32,7 @@
         "description": "Pigmentos de alta calidad con resistencia a la acción de la luz y luminosidad de color insuperables. Trazo suave de colorido intenso. Resistente al agua y permanente. Mina de 3,8 mm de grosor. Gran resistencia a la rotura gracias a un encolado elástico entre mina y madera. Elegir el color al finalizar la compra en notas.",
         "category": "Artística",
         "price": 760,
+        "stock": 50,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/l-piz-de-color-polychromos-tin-de-12-24-36-60-120-l-pices-de-colores1-80184854f539d1a8b716033754188364-1024-1024.jpg"
     },
     {
@@ -37,6 +41,7 @@
         "description": "Papel extra blanco fabricado a partir de la caña de azúcar, una materia prima renovable. Ideal para todo tipo de impresoras. 500 hojas",
         "category": "Comercial",
         "price": 1370,
+        "stock": 20,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/resma-autor-a4-80-grs1-63f05a014edecec15c15861000750197-1024-1024.jpg"
     },
     {
@@ -45,6 +50,7 @@
         "description": "Clasificador fuelle tamaño Oficio. Material: Palstico Expandible. 13 divisiones. Excelente calidad",
         "category": "Comercial",
         "price": 1618,
+        "stock": 8,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/clasificador-of-ride1-d85c3271362cdcad9c15868718195923-1024-1024.jpg"
     },
     {
@@ -53,6 +59,7 @@
         "description": "Carpeta con elástico traslucida para guardar documentos. Colores: colores metalizados. Azul, gris, violeta y verde. Tamaño: Oficio",
         "category": "Comercial",
         "price": 1128,
+        "stock": 15,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/carpeta-3-solapas-metalica-48004801-scaled1-41feee7c6f3a9d785116020866262854-1024-1024.jpg"
     },
     {
@@ -61,6 +68,7 @@
         "description": "",
         "category": "Comercial",
         "price": 434,
+        "stock": 40,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/072-0051-444823b94cff7b393315928460242860-1024-1024.jpg"
     },
     {
@@ -69,6 +77,7 @@
         "description": "Este cuaderno número 3 contiene 48 hojas de 100 grs. Tapa dura. Papel de fibra de caña de azúcar. Medida 19 x 24 cm. Tipo ABC ",
         "category": "Escolar",
         "price": 1050,
+        "stock": 36,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/cuaderno-exito-e3-forrado-arana-t-dura-universo-x-48-hjs1-f051ea0edd3ec5ae2f15858636276223-1024-1024.jpg"
     },
     {
@@ -77,6 +86,7 @@
         "description": "Todos los bolígrafos tienen tinta azul. Lo que cambiar es el color del cuerpo.",
         "category": "Escolar",
         "price": 530,
+        "stock": 51,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/thumb_6420_0193901-289465ed833acd658016179973645012-1024-1024.jpg"
     },
     {
@@ -85,6 +95,7 @@
         "description": "",
         "category": "Escolar",
         "price": 290,
+        "stock": 44,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/thumb_6964_1215041-f5ff2c37a87b02152516252560912247-1024-1024.jpg"
     },
     {
@@ -93,6 +104,7 @@
         "description": "Formato: 22 x 32cm Hojas 120g.",
         "category": "Escolar",
         "price": 1070,
+        "stock": 15,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/050841-block-de-dibujo-el-nene-n6-24-hojas-color-en-masa1-45dd8ef65f5330fee815874809218106-1024-1024.jpg"
     },
     {
@@ -101,6 +113,7 @@
         "description": "Compás técnico de 155 mm, metálico. Con cremallera. Se pueden realizar círculos hasta 50 cm. Viene con minas.Por unidad.",
         "category": "Técnica",
         "price": 3026,
+        "stock": 10,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/compas-pizzini-tecnico-metalico1-5bb229534688d0d72015857755834786-1024-1024.jpg"
     },
     {
@@ -109,6 +122,7 @@
         "description": "Regla de escala inalterable grabada en caliente. De acri­lico con doble bisel.",
         "category": "Técnica",
         "price": 944,
+        "stock": 40,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/regla-pizzini-verde-1541-a918481fe3ff8b533015861457368341-1024-1024.jpg"
     },
     {
@@ -117,6 +131,7 @@
         "description": "",
         "category": "Técnica",
         "price": 433,
+        "stock": 36,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/transportador-pizzini-6722-x-36011-0a0a877255290fae4715877356927213-1024-1024.jpg"
     },
     {
@@ -125,6 +140,7 @@
         "description": "Lápiz Staedler Noris de alta calidad para escribir, dibujar y esbozar. Ideal para la escuela y la oficina. Con forma hexagonal para facilitar el agarre. Increíble resistencia a la rotura gracias a la especial formulación de la mina y a su doble encoladura.",
         "category": "Técnica",
         "price": 262,
+        "stock": 12,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/lapiz-negro-staedtler-noris1-b1c32cc17140fc090815865365449468-1024-1024.jpg"
     },
     {
@@ -133,6 +149,7 @@
         "description": "Cuaderno Ledesma Essential 22X29CM 84 hojas. Tapa polipropileno semirigida. Contratapa de carton. Tamaño A4. Precio por unidad. Colores no elegibles, según stock.",
         "category": "Universitaria",
         "price": 1250,
+        "stock": 32,
         "image": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/cuaderno-ledesma-essential-x-84-hjs1-c91695ff9be84d1f0515859386569219-640-0.jpg"
     },
     {
@@ -141,6 +158,7 @@
         "description": "Tecnología Antisecado STABILO: 4 horas de protección antisecado para concentrarse en el trabajo. El único marcador en 9 atractivos colores fluorescentes. 2 anchos de trazo 2 + 5 mm. Recargable. Tinta con base acuosa. Económica y fácil recarga. Calidad robusta que asegura su larga duración.",
         "category": "Universitaria",
         "price": 498,
+        "stock": 39,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/028-2701-fcbf7ce0e4b59b432315861825493721-1024-1024.jpg"
     },
     {
@@ -149,6 +167,7 @@
         "description": "",
         "category": "Universitaria",
         "price": 788,
+        "stock": 20,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/d_nq_np_844171-mla45072259544_032021-o1-88fccb4227f5b1510016178207959247-1024-1024.jpg"
     },
     {
@@ -157,6 +176,7 @@
         "description": "Bolígrafo de cuerpo hexagonal translúcido, de diseño ergonómico que brinda una mayor comodidad durante su empleo, especialmente en el uso prolongado, ya que disminuye la presión que se ejerce en la zona de sujeción.",
         "category": "Universitaria",
         "price": 88,
+        "stock": 80,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/132/430/products/boligrafo-faber-castell-trilux-1-mm-vcolores-de643f810402e6095d15861021468421-1024-1024.jpg"
     },
     {
@@ -165,6 +185,7 @@
         "description": "Cartel feliz cumpleaños tipo guirnalda. Color blanco con letras doradas. El precio corresponde a 1 cartel de 15 letras. Cada banderín mide aprox. 16 x 11 cm y se extiende por aprox. 1.8 mts.",
         "category": "Fiestas",
         "price": 799,
+        "stock": 50,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/387/639/products/screenshot_20220111-165336_aliexpress-011-8faa4081684ff73ae416419316413301-640-0.jpeg"
     },
     {
@@ -173,6 +194,7 @@
         "description": "Globo Metalizado Número 40cm. Color Plateado. Al desplegar la pestaña de variantes podrás elegir entre los números disponibles. Apto para inflar con aire común. Se entrega desinflado (no incluye sorbete). El precio corresponde a 1 unidad.",
         "category": "Fiestas",
         "price": 150,
+        "stock": 30,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/387/639/products/numero-plateado-40cm1-eed4e86dd93ed9bc9615930392336996-640-0.jpg"
     },
     {
@@ -181,6 +203,7 @@
         "description": "Globos de latex lisos de 9 pulgadas. Al desplegar la pestaña de variantes podrás elegir entre los colores disponibles. Aptos para inflar con aire común. Se entregan desinflados. El precio corresponde a 1 paquete de 10 Globos.",
         "category": "Fiestas",
         "price": 285,
+        "stock": 64,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/387/639/products/globos-standart-91-83ef3b26879fd2e73716355467408631-640-0.jpeg"
     },
     {
@@ -189,6 +212,7 @@
         "description": "Globo de latex cromados de 24 pulgadas. Color plateado. Apto para inflar con helio o aire común. Se entrega desinflado. El precio corresponde a 1 unidad.",
         "category": "Fiestas",
         "price": 599,
+        "stock": 23,
         "image": "https://d3ugyf2ht6aenh.cloudfront.net/stores/387/639/products/pinata-cromada-plata1-5015a798420a395f5f16335437359621-640-0.jpg"
     },
     {
@@ -197,6 +221,7 @@
         "description": "Vasos Descartables 110cc. Colores surtidos por 100 unidades.",
         "category": "Papelería",
         "price": 758,
+        "stock": 25,
         "image": "https://grimbergdentales.vteximg.com.br/arquivos/ids/165619-1000-1000/vasos-descarables.jpg?v=637968804724000000"
     },
     {
@@ -205,6 +230,7 @@
         "description": "Plato plástico descartable. Pack x100 unidades.",
         "category": "Papelería",
         "price": 490,
+        "stock": 18,
         "image": "https://www.latas.com.ar/wp-content/uploads/2017/01/plato17.png"
     },
     {
@@ -213,6 +239,7 @@
         "description": "Mantel plástico color de Polietileno (BD), impermeables y muy prácticos. Excelente calidad.",
         "category": "Papelería",
         "price": 269,
+        "stock": 14,
         "image": "https://www.flexipack.com.ar/Image/0/600_750-mantel%20color1.jpg"
     },
     {
@@ -221,6 +248,7 @@
         "description": "Toalla Desechable Spun Laced 40 x 80 cm, 30 Unidades.Spun-laced, un material muy resistente y agradable al tacto.  se utiliza según formato para desmaquillar, extraer mascarillas, pedicura, manicura, secar el cabello, etc.",
         "category": "Papelería",
         "price": 0,
+        "stock": 52,
         "image": "https://masipnaturalness.com/wp-content/uploads/2018/04/toalla-desechable-40x80.jpg"
     },
     {
@@ -229,6 +257,7 @@
         "description": "",
         "category": "Repostería",
         "price": 1350,
+        "stock": 18,
         "image": "https://cotillongonic.com.ar/wp-content/uploads/2020/07/pin-semi1-5957a92784724ee54515749738440160-320-0.jpg"
     },
     {
@@ -237,6 +266,7 @@
         "description": "",
         "category": "Repostería",
         "price": 850,
+        "stock": 7,
         "image": "https://cotillongonic.com.ar/wp-content/uploads/2020/07/DDL1KREPO.jpg"
     },
     {
@@ -245,6 +275,7 @@
         "description": "Color a elección al momento de la compra: Amarillo, Azul, Blanco, Celeste, Marron CH, Naranja, Negro, Rojo, Rosa, Rosa B, Verde, Verde A, Verde N, Violeta",
         "category": "Repostería",
         "price": 340,
+        "stock": 49,
         "image": "https://cotillongonic.com.ar/wp-content/uploads/2020/07/colorante-en-pasta-fleibor-15grs.jpg"
     },
     {
@@ -253,6 +284,7 @@
         "description": "Colores: Amarillo, Azul, Blanco, Celeste, Dorado, Fucsia, Lila, Multicolor, Multicolor Fluo, Naranja, Negro, Plata, Rojo, Rosa, Rosa Chicle, Verde, Verde Manzana, Violeta.",
         "category": "Repostería",
         "price": 90,
+        "stock": 34,
         "image": "https://cotillongonic.com.ar/wp-content/uploads/2020/07/IMG_9620-scaled.jpg"
     }
 ]

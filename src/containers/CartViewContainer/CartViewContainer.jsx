@@ -2,10 +2,61 @@ import { useContext } from 'react';
 import { Context } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
+import { db } from '../../firebase/firebase';
+import { collection, addDoc, serverTimestamp, doc, updateDoc } from 'firebase/firestore';
+import Swal from 'sweetalert2'
 
 function CartViewContainer() {
-
     const { quantity, cart, total, clear } = useContext(Context);
+
+    const buyer = {
+        name: "user",
+        phone: "+54 9 11 2345 6789",
+        email: "user@mail.com"
+    }
+
+    const finalizePurchase = () => {
+        const items = [];
+        cart.forEach((item) => {
+            items.push({
+                id: item.id,
+                title: item.title,
+                price: item.price,
+                quantity: item.quantity
+            })
+        })
+
+        const cartCollection = collection(db, "sales");
+        addDoc(cartCollection, {
+            buyer,
+            items,
+            total,
+            date: serverTimestamp()
+        })
+        .then(result => {
+            console.log(result.id);
+            Swal.fire({
+                title: 'Muchas gracias por su compra!',
+                html: `Número de operación: <b>${result.id}</b>`,
+                icon: 'success',
+                confirmButtonText: 'Ok',
+                confirmButtonColor: '#00A19A'
+            })
+        })
+        .catch(err => {
+            console.log(err);
+        })
+
+        updateStock(cart);
+        clear();
+    }
+
+    const updateStock = () => {
+        cart.forEach(item => {
+            const product = doc(db, "productList", item.id);
+            updateDoc(product, {stock: item.stock - item.quantity})
+        })
+    }
 
     return (
         <section className="mainContent cartView">
@@ -31,7 +82,7 @@ function CartViewContainer() {
                                 <h2 className="title">Total</h2>
                                 <span className="total">${total}</span>
                             </div>
-                            <button className="total__btn">Comprar</button>
+                            <button className="total__btn" onClick={finalizePurchase}>Comprar</button>
                         </div>
                     </>
                 )

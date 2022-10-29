@@ -13,7 +13,7 @@ function ItemDetailContainer() {
     const { idProduct } = useParams();
 
     useEffect(() => {
-        const productCollection = collection(db, 'products');
+        const productCollection = collection(db, 'productList');
         const refDoc = doc(productCollection, idProduct);
 
         const getItem = async () => {
