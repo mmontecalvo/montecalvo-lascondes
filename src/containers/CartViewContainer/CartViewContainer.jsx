@@ -6,12 +6,22 @@ import { db } from '../../firebase/firebase';
 import { collection, addDoc, serverTimestamp, doc, updateDoc } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 import Checkout from './Checkout';
+import Spinner from '../../components/Spinner';
 
 function CartViewContainer() {
     const { quantity, cart, total, clear } = useContext(Context);
     const [ buyer, setBuyer ] = useState({});
+    const [ loading, setLoading ] = useState(false);
 
+    const updateStock = () => {
+        cart.forEach(item => {
+            const product = doc(db, "productList", item.id);
+            updateDoc(product, {stock: item.stock - item.quantity})
+        })
+    }
+    
     const finalizePurchase = () => {
+        setLoading(true)
         const items = [];
         cart.forEach((item) => {
             items.push({
@@ -32,7 +42,6 @@ function CartViewContainer() {
             date: serverTimestamp(),
         })
         .then(result => {
-            console.log(result.id);
             Swal.fire({
                 title: 'Muchas gracias por su compra!',
                 html: `Número de operación: <b>${result.id}</b>`,
@@ -44,23 +53,22 @@ function CartViewContainer() {
         .catch(err => {
             console.log(err);
         })
+        .finally(() => {
+            setLoading(false);
+        })
 
         updateStock(cart);
         clear();
     }
 
-    const updateStock = () => {
-        cart.forEach(item => {
-            const product = doc(db, "productList", item.id);
-            updateDoc(product, {stock: item.stock - item.quantity})
-        })
-    }
-
     return (
         <section className="mainContent cartView">
             {
-                quantity === 0 ? (
+                quantity === 0 ? ( loading ? (
+                    <Spinner />
+                ) : (
                     <h1 className="cartView__message">Tu carrito está vacío. Para agregar productos presiona <Link to="/" className="message__link">aquí</Link>.</h1>
+                )
                 ) : (
                     <>
                         <div className="cartView__header">

@@ -12,7 +12,6 @@ const Navbar = () => {
 
     const handlerClick = () => {
         setShowMenu(!showMenu);
-        console.log(showMenu);
     }
 
     const { categories } = useContext(Context);

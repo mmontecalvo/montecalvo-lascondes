@@ -36,10 +36,20 @@ function PurchasesContainer() {
     }, [ idPurchase ]);
 
     return (
-        <section className="mainContent purchasesContainer">
+        <section className="mainContent purchaseContainer">
             {
                 <>
-                { loading ? <Spinner /> : <Purchase purchase={purchase}/> }
+                { loading ? <Spinner /> : 
+                    ( purchase.items ? (
+                            <Purchase purchase={purchase} />
+                        ) : (
+                            <div className="purchaseContainer__error">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1178/1178479.png" alt="" />
+                                <h1 className="error__text">No hay ninguna compra asociada al código ingresado.</h1>
+                            </div>
+                        )
+                    ) 
+                }
                 </>
             }
         </section>

@@ -1,9 +1,10 @@
 import { createContext, useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Context = createContext();
 
 export function CartContext({children}) {
-
     const [cart, setCart] = useState(() => {
 		const storageCart = localStorage.getItem('Cart');
 		const savedCart = JSON.parse(storageCart);
@@ -11,6 +12,19 @@ export function CartContext({children}) {
 	});
     const [ quantity, setQuantity ] = useState(0);
     const [ total, setTotal ] = useState(0);
+
+    const setToastify = (text) => {
+        toast.success(text, {
+            position: "top-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+    }
 
     useEffect(() => {
         let qtyCart = 0;
@@ -38,16 +52,19 @@ export function CartContext({children}) {
             setCart([...cart, {...item, quantity: qty}])
             setQuantity(quantity + qty)
         }
+        setToastify("Producto agregado al carrito.")
     }
 
     const removeItem = (itemId) => {
         setCart(cart.filter((item) => item.id !== itemId));
+        setToastify("Producto eliminado del carrito.")
     }
 
     const clear = () => {
         setCart([]);
         setQuantity(0);
         setTotal(0);
+        setToastify("Se ha vaciado el carrito exitosamente.")
     }
 
     const isInCart = (itemId) => cart.some((item) => item.id === itemId);
@@ -61,6 +78,7 @@ export function CartContext({children}) {
     return (
         <Context.Provider value={{ cart, quantity, total, addItem, removeItem, clear, isInCart, data, itemList }}>
             {children}
+            <ToastContainer />
         </Context.Provider>
     )
 }

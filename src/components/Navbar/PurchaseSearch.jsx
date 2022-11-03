@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
@@ -12,11 +12,11 @@ function PurchaseSearch() {
     }
 
     const handlerClick = () => {
-        setShowModal(!showModal)
+        setShowModal(!showModal);
     }
 
     const closeModal = () => {
-        setShowModal(false)
+        setShowModal(false);
     }
 
     return (

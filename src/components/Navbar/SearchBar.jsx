@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Context } from '../../context/CartContext';
 import { Link } from 'react-router-dom';

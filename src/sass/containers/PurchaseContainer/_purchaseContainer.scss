@@ -1,4 +1,17 @@
-.purchasesContainer {
+.purchaseContainer {
     @include flex(column, center, center, $spacing-l);
-    padding: $spacing-m;    
+    padding: $spacing-m;
+    
+    .purchaseContainer__error {
+        @include flex(column, center, center, $spacing-m);
+
+        img {
+            width: 10rem;
+            opacity: 0.7;
+        }
+
+        .error__text {
+            @include text($color-text, $text-m, center, 1em);
+        }
+    }
 }

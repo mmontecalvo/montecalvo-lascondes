@@ -53,3 +53,19 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .form {
+        .form__input {
+            width: 96vw;
+    
+            label {
+                width: 30%;
+            }
+    
+            input {
+                width: 70%;
+            }
+        }
+    }
+}

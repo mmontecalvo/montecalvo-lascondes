@@ -7,11 +7,10 @@ import Spinner from '../../components/Spinner';
 import { Context } from '../../context/CartContext';
 
 function ItemListContainer({greeting}) {
-
-  const { itemList } = useContext(Context);
-
   const [ products, setProducts ] = useState([]);
   const [ loading, setLoading ] = useState([true]);
+
+  const { itemList } = useContext(Context);
 
   const { idCategory } = useParams();
 

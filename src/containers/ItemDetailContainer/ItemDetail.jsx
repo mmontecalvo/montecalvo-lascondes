@@ -12,8 +12,6 @@ function ItemDetail({product}) {
         setShowItemCount(false);
     }
 
-    console.log(product)
-
     return (
         <article className="itemDetail" key={product.id}>
             { 
@@ -37,7 +35,12 @@ function ItemDetail({product}) {
                             )}
                         </div>
                     </>
-                ) : (<h1 className="itemDetail__message">Produto no encontrado. <Link to="/" className="message__link">Volver a la página principal.</Link></h1>)
+                ) : (
+                    <div className="itemDetail__message">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1178/1178479.png" alt="" />
+                        <h1 className="message__title">Produto no encontrado. <Link to="/" className="message__link">Volver a la página principal.</Link></h1>
+                    </div>
+                )
             }
         </article>
     )

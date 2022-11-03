@@ -1,6 +1,5 @@
 import Item from './Item';
 
-
 function ItemList({products}) {
     return (
         <article className="itemList">

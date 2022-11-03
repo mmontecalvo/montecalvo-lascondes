@@ -56,15 +56,25 @@
     }
 
     .itemDetail__message {
-        @include text($color-text, $text-m, center, 1em);
+        @include flex(column, center, center, $spacing-m);
 
-        .message__link {
-            cursor: pointer;
-            color: $color-secondary;
-            text-decoration: underline;
+        img {
+            width: 10rem;
+            opacity: 0.7;
+        }
 
-            &:hover { 
-                color: $color-primary;
+        .message__title{
+            @include text($color-text, $text-m, center, 1em);
+
+            .message__link {
+                cursor: pointer;
+                color: $color-secondary;
+                text-decoration: underline;
+    
+                &:hover { 
+                    color: $color-primary;
+                }
+            
             }
         }
     }

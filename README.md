@@ -2,6 +2,8 @@
 
 eCommerce de *Las Condes | Librería y cotillón* (empresa familiar).
 
+[Visitar el ecommerce]()
+
 ## Tecnologías utilizadas
 
 Aplicación web construída con **React Js**. Lenguajes y librerías utilizadas:
@@ -22,4 +24,26 @@ En el carrito se pueden eliminar productos seleccionados, se puede vaciar el mis
 
 Tanto la lista de productos, con su respectivo stock disponible, como las ventas realizas, son almacenadas en la base de datos de Firebase.
 
-[Visitar el ecommerce]()
+## Proceso de descarga
+
+Para descargar el proyecto en tu dispositivo podés seguir los siguientes pasos desde tu consola:
+
+1) Clonar el repositorio
+```bash
+git clone https://github.com/mmontecalvo/montecalvo-lascondes.git
+```
+
+2) Ir al directorio del proyecto
+```bash
+cd montecalvo-lascondes
+```
+
+3) Instalar las dependencias
+```bash
+npm i
+```
+
+4) Iniciar servidor local
+```bash
+npm start
+```
