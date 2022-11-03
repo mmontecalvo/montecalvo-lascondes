@@ -1,19 +1,15 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Context } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 import CartItem from './CartItem';
 import { db } from '../../firebase/firebase';
 import { collection, addDoc, serverTimestamp, doc, updateDoc } from 'firebase/firestore';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import Checkout from './Checkout';
 
 function CartViewContainer() {
     const { quantity, cart, total, clear } = useContext(Context);
-
-    const buyer = {
-        name: "user",
-        phone: "+54 9 11 2345 6789",
-        email: "user@mail.com"
-    }
+    const [ buyer, setBuyer ] = useState({});
 
     const finalizePurchase = () => {
         const items = [];
@@ -21,7 +17,9 @@ function CartViewContainer() {
             items.push({
                 id: item.id,
                 title: item.title,
+                description: item.description,
                 price: item.price,
+                image: item.image,
                 quantity: item.quantity
             })
         })
@@ -31,7 +29,7 @@ function CartViewContainer() {
             buyer,
             items,
             total,
-            date: serverTimestamp()
+            date: serverTimestamp(),
         })
         .then(result => {
             console.log(result.id);
@@ -74,15 +72,16 @@ function CartViewContainer() {
                         </div>
                         {
                             cart.map((product) => {
-                                return <CartItem key={product.id} product={product} />
+                                return <CartItem key={product.id} product={product} isOrderView={false} />
                             })
                         }
                         <div className="cartView__total">
-                            <div className="total__container">
-                                <h2 className="title">Total</h2>
+                                <h2 className="title">Total: </h2>
                                 <span className="total">${total}</span>
-                            </div>
-                            <button className="total__btn" onClick={finalizePurchase}>Comprar</button>
+                        </div>
+                        <div className="cartView__checkout">
+                            <h2 className="checkout__title">Ingresa tus datos para finalizar la compra</h2>
+                            <Checkout setBuyer={setBuyer} finalizePurchase={finalizePurchase} />
                         </div>
                     </>
                 )

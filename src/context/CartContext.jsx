@@ -4,7 +4,11 @@ export const Context = createContext();
 
 export function CartContext({children}) {
 
-    const [ cart, setCart ] = useState([]);
+    const [cart, setCart] = useState(() => {
+		const storageCart = localStorage.getItem('Cart');
+		const savedCart = JSON.parse(storageCart);
+		return savedCart || [];
+	});
     const [ quantity, setQuantity ] = useState(0);
     const [ total, setTotal ] = useState(0);
 
@@ -17,6 +21,7 @@ export function CartContext({children}) {
         });
         setQuantity(qtyCart);
         setTotal(totalCart)
+        localStorage.setItem('Cart', JSON.stringify(cart));
     }, [ cart ]);
 
     const addItem = (item, qty) => {

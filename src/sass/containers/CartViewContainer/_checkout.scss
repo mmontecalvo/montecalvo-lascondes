@@ -1,0 +1,55 @@
+.form {
+    @include flex(column, center, center, $spacing-s);
+
+    .form__input {
+        @include flex(row, center, center, $spacing-s);
+
+        label {
+            @include text($color-text, $text-base, right, 1em);
+            width: 16rem;
+
+            span {
+                color: $color-primary;
+            }
+        }
+
+        input {
+            width: 40rem;
+            height: 3rem;
+            @include text($color-text, $text-base, left, 1em);
+            font-family: $font-base;
+            padding: 1.5rem;
+            border: $b-desktop solid transparent;
+            border-radius: 0.5rem;
+            outline: none;
+            background-color: $color-bg-grey;
+            transition: 1s ease;
+
+            &::placeholder {
+                color: $color-secondary;
+                opacity: 0.5;
+            }
+
+            &:focus, &:hover {
+                outline: none;
+                border-color: $color-primary;
+                background-color: $color-bg;
+            }
+        }
+    }
+
+    .form__btn {
+        @include text($color-text, $text-base, center, 1em);
+        font-family: $font-base;
+        cursor: pointer;
+        padding: $spacing-s $spacing-l;
+        background-color: $color-bg-grey;
+        border-radius: 0.5rem;
+        border: none;
+        margin: $spacing-m auto;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}

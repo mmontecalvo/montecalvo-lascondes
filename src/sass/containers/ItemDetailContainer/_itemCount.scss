@@ -1,5 +1,5 @@
 .card__counter {
-    @include flex(column, center, center, $spacing-s);
+    @include flex(row, center, center, $spacing-s);
     
     .counter {
         @include flex(row, center, center, $spacing-s);

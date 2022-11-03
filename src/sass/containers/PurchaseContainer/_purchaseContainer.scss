@@ -1,0 +1,4 @@
+.purchasesContainer {
+    @include flex(column, center, center, $spacing-l);
+    padding: $spacing-m;    
+}

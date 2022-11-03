@@ -49,9 +49,9 @@ function ItemListContainer({greeting}) {
     <section className="mainContent itemListContainer">
       <h1>{greeting}</h1>
       {
-        <>
+        <div className="container">
         { loading ? <Spinner /> : <ItemList products={products} /> }
-        </>
+        </div>
       }
     </section>
     )

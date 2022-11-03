@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Name from '../../img/name.svg';
 import CartWidget from './CartWidget';
 import SearchBar from './SearchBar';
 import BurgerMenu from './BurgerMenu';
-import { libreriaCategories, cotillonCategories } from '../../data/categories'
+import PurchaseSearch from './PurchaseSearch';
 import { Link, NavLink } from 'react-router-dom';
+import { Context } from '../../context/CategoriesContext';
 
 const Navbar = () => {
     const [ showMenu, setShowMenu ] = useState(((window.innerWidth < 768) ? false : true));
@@ -13,6 +14,27 @@ const Navbar = () => {
         setShowMenu(!showMenu);
         console.log(showMenu);
     }
+
+    const { categories } = useContext(Context);
+
+    const libraryCategories = categories.filter( c => c.category === 'Librería' ).sort((c1, c2) => {
+        if(c1.name < c2.name){
+            return -1;
+        } else if(c1.name > c2.name){
+            return 1;
+        } else {
+            return 0;
+        }
+    });
+    const cotillonCategories = categories.filter( c => c.category === 'Cotillón' ).sort((c1, c2) => {
+        if(c1.name < c2.name){
+            return -1;
+        } else if(c1.name > c2.name){
+            return 1;
+        } else {
+            return 0;
+        }
+    });
 
     return (
         <>
@@ -28,7 +50,7 @@ const Navbar = () => {
                         LIBRERÍA
                         <div className="dropdown-content">
                             {
-                                libreriaCategories.map((category) => {
+                                libraryCategories.map((category) => {
                                     return <NavLink key={category.id} to={category.route}>{category.name}</NavLink>
                                 })
                             }
@@ -46,6 +68,7 @@ const Navbar = () => {
                     </li>
                 </ul>
                 <Link to="/cart"><CartWidget /></Link>
+                <PurchaseSearch />
             </nav>
         </header>
     </>

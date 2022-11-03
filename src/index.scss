@@ -10,13 +10,13 @@
 @import './sass/components/Navbar/burgerMenu';
 @import './sass/components/Navbar/searchBar';
 @import './sass/components/Navbar/cartWidget';
+@import './sass/components/Navbar/purchaseSearch';
 
 /* FOOTER */
 @import './sass/components/Footer/footer';
 
 /* OTHERS */
 @import './sass/components/spinner';
-@import './sass/components/itemCount';
 
 /* CONTAINERS */
 
@@ -28,7 +28,16 @@
 /* ITEM DETAIL CONTAINER */
 @import './sass/containers/ItemDetailContainer/itemDetailContainer';
 @import './sass/containers/ItemDetailContainer/itemDetail';
+@import './sass/containers/ItemDetailContainer/itemCount';
 
 /* CART VIEW CONTAINER */
 @import './sass/containers/CartViewContainer/cartViewContainer';
 @import './sass/containers/CartViewContainer/cartItem';
+@import './sass/containers/CartViewContainer/checkout';
+
+/* PURCHASES CONTAINER */
+@import './sass/containers/PurchaseContainer/purchaseContainer';
+@import './sass/containers/PurchaseContainer/purchase';
+
+/* PAGE 404 */
+@import './sass/containers/Page404/page404';

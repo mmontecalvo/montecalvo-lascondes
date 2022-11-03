@@ -1,9 +1,15 @@
 .itemListContainer {
     @include flex(column, center, center, $spacing-s);
+    min-height: 100vh;
 
     h1 {
         @include text($color-text, $text-l, center, 1em);
         font-family: $font-title;
         padding-top: 2rem;
+    }
+
+    .container {
+        @include flex(row, center, center, 0);
+        min-height: calc(100vh - 12rem);
     }
 }

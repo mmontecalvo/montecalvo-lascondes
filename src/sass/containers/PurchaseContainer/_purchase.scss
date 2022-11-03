@@ -1,0 +1,44 @@
+.purchase__header {
+    @include flex(row, space-between, center, 0);
+    width: 100%;
+    border-bottom: $b-desktop solid $color-bg-grey;
+    padding: $spacing-m;
+
+    .header__title {
+        @include text($color-text, $text-m, center, 1em);
+
+        span {
+            font-size: 80%;
+            color: $color-secondary;
+        }
+    }
+
+    .header__links {
+        @include flex(row, center, center, 0);
+
+        .link {
+            @include text($color-secondary, $text-base, center, 1em);
+            cursor: pointer;
+            padding-left: $spacing-l;
+
+            &:hover { 
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+.purchase__total {
+    @include flex(row, flex-end, center, $spacing-m);
+    width: 100%;
+    border-top: $b-desktop solid $color-bg-grey;
+    padding: $spacing-m;
+
+    .title {
+        @include text($color-secondary, $text-m, left, 1em);
+    }
+
+    .total {
+        @include text($color-text, $text-m, left, 1em);
+    }
+}

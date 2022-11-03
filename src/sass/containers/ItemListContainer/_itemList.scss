@@ -1,5 +1,6 @@
 .itemList {
-    @include flex(row, center, center, $spacing-s);
+    @include flex(row, center, flex-start, $spacing-s);
     flex-wrap: wrap;
     padding: $spacing-l;
+    min-height: calc(100vh - 12rem);
 }

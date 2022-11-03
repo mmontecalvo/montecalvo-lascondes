@@ -28,10 +28,15 @@
 
         .info__title {
             @include text($color-text, 2rem, left, 1em);
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
 
         .info__description {
             @include text($color-text, $text-s, left, 1em);
+            font-family: $font-light;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;

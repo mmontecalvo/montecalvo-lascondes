@@ -1,0 +1,26 @@
+.page404 {
+    @include flex(column, center, center, $spacing-m);
+
+    .page404__title {
+        @include text($color-primary, $text-xxl, center, 1em);
+        font-family: $font-logo;
+    }
+
+    .page404__text {
+        @include text($color-text, $text-m, center, 1em);
+    }
+
+    .page404__btn {
+        @include text($color-text, $text-base, center, 1em);
+        font-family: $font-base;
+        cursor: pointer;
+        padding: $spacing-s $spacing-m;
+        background-color: $color-bg-grey;
+        border-radius: 0.5rem;
+        border: none;
+
+        &:hover {
+            background-color: $color-primary;
+        }
+    }
+}

@@ -1,8 +1,9 @@
 import { useContext } from 'react';
 import { Context } from '../../context/CartContext';
 import ClearIcon from '@mui/icons-material/Clear';
+import { Link } from 'react-router-dom';
 
-function CartItem({product}) {
+function CartItem({product, isOrderView}) {
 
     const { removeItem } = useContext(Context);
 
@@ -12,7 +13,9 @@ function CartItem({product}) {
                 <img src={product.image} alt={product.title} />
             </picture>
             <div className="cartItem__info">
-                <h3 className="info__title">{product.title}</h3>
+                <Link to={"/producto/" + product.id}>
+                    <h3 className="info__title">{product.title}</h3>
+                </Link>
                 <p className="info__description">{product.description}</p>
             </div>
             <div className="cartItem__qty">
@@ -23,7 +26,11 @@ function CartItem({product}) {
                 <h4 className="total__title">Total</h4>
                 <span className="total">${product.price*product.quantity}</span>
             </div>
-            <ClearIcon className="cartItem__remove" onClick={() => removeItem(product.id)} />
+            {
+                isOrderView ? ("") : (
+                        <ClearIcon className="cartItem__remove" onClick={() => removeItem(product.id)} />
+                )
+            }
         </article>
     )
 }

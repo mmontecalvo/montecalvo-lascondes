@@ -1,0 +1,66 @@
+.navbar__purchaseSearch {
+    position: relative;
+
+    .purchaseSearch__icon {
+        cursor: pointer;
+        font-size: 4rem;
+        color: $color-secondary;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }  
+
+    .purchaseSearch__modal {
+        @include flex(column, center, flex-start, $spacing-m);
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background-color: $color-bg;
+        border: $b-desktop solid $color-bg-grey;
+        border-radius: 0.5rem;
+        padding: $spacing-m;
+
+        .modal__title {
+            @include text($color-text, $text-base, left, 1em);
+        }
+
+        .modal__input {
+            @include flex(row, center, center, $spacing-s);
+    
+            input {
+                width: 24rem;
+                height: 3rem;
+                @include text($color-text, $text-base, left, 1em);
+                font-family: $font-base;
+                padding: 1.5rem;
+                border: $b-desktop solid transparent;
+                border-radius: 0.5rem;
+                outline: none;
+                background-color: $color-bg-grey;
+                transition: 1s ease;
+    
+                &::placeholder {
+                    color: $color-secondary;
+                    opacity: 0.5;
+                }
+    
+                &:focus, &:hover {
+                    outline: none;
+                    border-color: $color-primary;
+                    background-color: $color-bg;
+                }
+            }
+            
+            .input__icon {
+                cursor: pointer;
+                font-size: 3rem;
+                color: $color-secondary;
+        
+                &:hover {
+                    color: $color-primary;
+                }
+            }  
+        }
+    }
+}

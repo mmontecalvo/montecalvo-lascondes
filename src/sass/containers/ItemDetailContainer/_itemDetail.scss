@@ -21,6 +21,11 @@
 
         .info__text {
             @include text($color-text, $text-m, left, 1em);
+            font-family: $font-light;
+        }
+
+        .info__stock {
+            @include text($color-bg-grey, $text-base, left, 1em);
         }
 
         .info__price {
@@ -46,6 +51,20 @@
 
             &:hover {
                 background-color: $color-primary;
+            }
+        }
+    }
+
+    .itemDetail__message {
+        @include text($color-text, $text-m, center, 1em);
+
+        .message__link {
+            cursor: pointer;
+            color: $color-secondary;
+            text-decoration: underline;
+
+            &:hover { 
+                color: $color-primary;
             }
         }
     }

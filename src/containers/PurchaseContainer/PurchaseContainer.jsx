@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Purchase from './Purchase';
+import Spinner from '../../components/Spinner';
 import { getDoc, collection, doc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
-import Spinner from '../../components/Spinner';
-import ItemDetail from './ItemDetail';
 
-function ItemDetailContainer() {
-    const [ product, setProduct ] = useState([]);
+function PurchasesContainer() {
+    const [ purchase, setPurchase ] = useState([]);
     const [ loading, setLoading ] = useState([true]);
 
-    const { idProduct } = useParams();
+    const { idPurchase } = useParams();
 
     useEffect(() => {
-        const productCollection = collection(db, 'productList');
-        const refDoc = doc(productCollection, idProduct);
+        const purchaseCollection = collection(db, 'sales');
+        const refDoc = doc(purchaseCollection, idPurchase);
 
         const getItem = async () => {
             try{
@@ -22,7 +22,7 @@ function ItemDetailContainer() {
                     id: answer.id,
                     ...answer.data()
                 };
-                setProduct(dataDoc);
+                setPurchase(dataDoc);
             }
             catch(error){
                 console.error(error);
@@ -33,17 +33,17 @@ function ItemDetailContainer() {
         }
 
         getItem();
-    }, [ idProduct ]);
+    }, [ idPurchase ]);
 
     return (
-        <section className="mainContent itemDetailContainer">
+        <section className="mainContent purchasesContainer">
             {
                 <>
-                { loading ? <Spinner /> : <ItemDetail product={product} /> }
+                { loading ? <Spinner /> : <Purchase purchase={purchase}/> }
                 </>
             }
         </section>
     )
 }
 
-export default ItemDetailContainer
+export default PurchasesContainer
