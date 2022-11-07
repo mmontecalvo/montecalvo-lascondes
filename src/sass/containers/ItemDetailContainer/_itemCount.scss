@@ -39,3 +39,27 @@
         }
     }
 }
+
+@media screen and (max-width: 600px) {
+    .card__counter {
+        .counter {
+            .counter__number {
+                width: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card__counter {
+        .counter {
+            .counter__number {
+                width: 2rem;
+            }
+        }
+
+        .card__addCart {
+            width: auto;
+        }
+    }
+}
