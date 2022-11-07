@@ -42,7 +42,7 @@ export function CartContext({children}) {
         if (isInCart(item.id)) {
             const updatedCart = cart.map((product) =>
                 product.id === item.id ? (
-                    {...product, quantity: qty}
+                    {...product, quantity: product.quantity + qty}
                 ) : (
                     product
                 )

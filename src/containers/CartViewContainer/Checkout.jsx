@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
 function Checkout({setBuyer, finalizePurchase}) {
-    const [ name, setName ] = useState('')
-    const [ lastname, setLastame ] = useState('')
-    const [ email, setEmail ] = useState('')
+    const [ name, setName ] = useState('');
+    const [ lastname, setLastame ] = useState('');
+    const [ email, setEmail ] = useState('');
 
     const setInput = (e) => {
         if (e.target.name === 'name'){
@@ -21,10 +21,6 @@ function Checkout({setBuyer, finalizePurchase}) {
         });
     }
 
-    // const validator = () => {
-
-    // }
-
     return (
         <form className="form" onSubmit={finalizePurchase}>
             <div className="form__input">
@@ -41,7 +37,7 @@ function Checkout({setBuyer, finalizePurchase}) {
             </div>
             <div className="form__input">
                 <label htmlFor=""><span>*</span> Confirmar email:</label>
-                <input name="email2" type="text" placeholder="Confirma tu email" required />
+                <input name="email2" type="text" placeholder="Confirma tu email" required pattern={email} title="El email introducido no coincide." />
             </div>
             <button className="form__btn" type="submit" >Finalizar comprar</button>
         </form>
